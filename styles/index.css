@@ -1,0 +1,98 @@
+body {
+    background-color: brown;
+    margin: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;  /* isnt 42px too much ? */
+}
+
+/* SIDE-NAV & TOP-NAV */
+
+.nav {
+    display: flex;
+}
+
+.sidenav {
+    /*position: fixed;
+    width: 150px;
+    height: 100%;
+    padding: 5px 5px;
+    display: flex;*/
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: orangered;
+    transition: 0.5s;
+    padding-top: 60px;    /* THIS NEEDS JAVASCRIPT ME THINKS */
+}
+
+.x-btn {
+    justify-content: flex-end;
+}
+
+.topnav {
+    width: 100%;
+    margin: none;  
+    padding: 5px 5px;
+    background-color: coral;
+    position: sticky; /* I NEED A BREAKPOINT */
+    /*transition: margin-left .5s;*/
+}
+
+a {
+    float: left;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none; 
+    color: whitesmoke;  /* WHY DO I NEED TO HAVE THE COLOR IN HERE AND WHY DOES IT NOT WORK WHEN IN 'BODY' */
+}
+
+a:hover {
+    background-color: lightgreen;
+    color: darkred;
+}
+
+a:active {
+    background-color: yellowgreen;
+    color: tomato;
+}
+
+/*a:visited {
+    background-color: teal;
+    color: mediumvioletred; IF I HAVE THIS ACTIVATED IT MESSES UP THE WHOLE LAYOUT , WHY??? 
+}*/
+
+/* MAIN */
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    flex: 1;
+    padding: 20px;
+
+    font-size: 80px;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+img {
+    flex: 2;
+}
+
+@media screen and (max-width: 600px) {
+    a {
+      float: none;
+      display: block;
+    }
+  }
